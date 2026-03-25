@@ -1,0 +1,39 @@
+.about {
+  border-top: 1px solid var(--color-border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.bio p {
+  font-size: var(--text-lg);
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.bio p + p {
+  margin-top: var(--space-lg);
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}

@@ -1,0 +1,126 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: var(--space-lg) 0;
+  transition: background-color var(--duration-base) ease,
+    backdrop-filter var(--duration-base) ease,
+    padding var(--duration-base) ease;
+}
+
+.header.scrolled {
+  background-color: rgba(10, 10, 11, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  transition: color var(--duration-fast) ease;
+}
+
+.logo:hover {
+  color: var(--color-accent);
+}
+
+.links {
+  display: flex;
+  gap: var(--space-xl);
+  list-style: none;
+}
+
+.link {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast) ease;
+  letter-spacing: 0.01em;
+}
+
+.link:hover {
+  color: var(--color-text);
+}
+
+/* Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px;
+  z-index: 110;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform var(--duration-base) var(--ease-out-expo),
+    opacity var(--duration-fast) ease;
+}
+
+.burgerOpen span:first-child {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+
+.burgerOpen span:last-child {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+
+/* Mobile menu */
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background-color: rgba(10, 10, 11, 0.97);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  text-align: center;
+  list-style: none;
+}
+
+.mobileLink {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  transition: color var(--duration-fast) ease;
+}
+
+.mobileLink:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
