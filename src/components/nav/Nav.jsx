@@ -8,9 +8,11 @@ import { siteConfig } from '@/lib/data';
 
 const navLinks = [
   { href: '/#about', label: 'About' },
-  { href: '/#services', label: 'Services' },
   { href: '/work', label: 'Work' },
+  { href: '/#training', label: 'Training' },
+  { href: '/#services', label: 'Services' },
   { href: '/case-studies', label: 'Case Studies' },
+  { href: '/#resume', label: 'Resume' },
   { href: '/#contact', label: 'Contact' },
 ];
 

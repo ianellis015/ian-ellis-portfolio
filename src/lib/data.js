@@ -6,7 +6,7 @@ export const projects = [
       'A personal intelligence engine powered by AI that builds a dynamic model of who I am and delivers tailored news, insights, and market projections using advanced financial mathematical analysis.',
     longDescription:
       'I built this to move beyond generic information feeds and create something more intentional. I wanted a way to personalize my information stream while enforcing a higher standard of reliability, grounding everything in reputable sources through a RAG-based pipeline. Instead of passively consuming content, this system understands my interests, goals, and decision-making context to surface what matters most, while uncovering deeper patterns and forward-looking insights through structured analysis. The goal is to turn information into clarity, and clarity into better decisions over time.',
-    tech: ['React', 'Capacitor', 'Node.js', 'TensorFlow'],
+    tech: ['React', 'FastAPI', 'Milvus', ],
     category: 'AI & LLM Integration',
     image: '/images/work/debrief-ai.jpg',
     color: '#f59e0b',
@@ -37,6 +37,7 @@ export const projects = [
     tech: ['Next.js', 'OpenAI API', 'Cloudflare'],
     category: 'AI Education & Full-Stack Application',
     image: '/images/work/ai-learning-hub.jpg',
+    externalUrl: 'https://ai.bizznest.org',
     color: '#10b981',
     year: '2025',
     featured: true,
@@ -163,12 +164,13 @@ export const services = [
 export const siteConfig = {
   name: 'Ian Ellis',
   title: 'Full-Stack Engineer & AI Integration Specialist',
-  tagline: 'I build intelligent software that bridges the gap between cutting-edge AI and real-world products.',
+  tagline: 'Building intelligent software that bridges the gap between cutting-edge AI and real-world products.',
   email: 'ianellis015@gmail.com',
   github: 'https://github.com/ianellis015',
   linkedin: 'https://linkedin.com/in/ian-ellis-283821256',
   about: [
     "I'm a full-stack software engineer and technical leader who specializes in AI integrations and agentic applications with custom MCP layers. I lead projects end-to-end, from system architecture and project scoping to delivery, bringing both the technical depth and project management mindset needed to turn a client's vision into a functioning product.",
+    "I’m especially interested in building systems that turn complex information into clarity. Whether that’s through AI-powered tools, data-driven models, or thoughtful interfaces, I enjoy working at the intersection of mathematics, engineering, and real-world decision making. I tend to approach problems from both a technical and human perspective, aiming to build things that not only work well, but genuinely help people think better and move forward with confidence.",
     "Away from work, I'm deeply obsessed with the culinary world and love challenging myself to create fine dining experiences in my own kitchen. I'm also an avid ping pong player and proud of it. At the end of the day, I'm just an engineer who loves living life, always chasing new experiences and finding the next thing to be curious about.",
   ],
 };

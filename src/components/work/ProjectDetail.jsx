@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import FadeIn from '@/components/animations/FadeIn';
 import TextReveal from '@/components/animations/TextReveal';
@@ -59,16 +60,47 @@ export default function ProjectDetail({ project }) {
               ))}
             </div>
           </FadeIn>
+
+          {project.externalUrl && (
+            <FadeIn delay={0.5}>
+              <a
+                href={project.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.externalLink}
+              >
+                Visit Live Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </FadeIn>
+          )}
         </div>
       </section>
 
       <section className={styles.imageSection}>
         <div className="container">
           <FadeIn>
-            <div className={styles.imagePlaceholder} style={{ '--project-color': project.color }}>
-              <span className={styles.placeholderLetter}>{project.title[0]}</span>
-              <span className={styles.placeholderHint}>Project screenshot coming soon</span>
-            </div>
+            {project.image ? (
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className={styles.projectImage}
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                  priority
+                />
+              </div>
+            ) : (
+              <div className={styles.imagePlaceholder} style={{ '--project-color': project.color }}>
+                <span className={styles.placeholderLetter}>{project.title[0]}</span>
+                <span className={styles.placeholderHint}>Project screenshot coming soon</span>
+              </div>
+            )}
           </FadeIn>
         </div>
       </section>

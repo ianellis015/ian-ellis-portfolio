@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Ian Ellis — Full-Stack Engineer & AI Specialist',
+  title: 'Ian Ellis | Engineering & AI',
   description:
     'Full-stack software engineer specializing in AI integrations. I build and ship intelligent products with React, Next.js, Node.js, and modern AI APIs.',
   openGraph: {
@@ -25,6 +25,9 @@ export const metadata = {
     description:
       'Full-stack software engineer specializing in AI integrations.',
     type: 'website',
+  },
+  icons: {
+    icon: '/icon.png',
   },
 };
 
